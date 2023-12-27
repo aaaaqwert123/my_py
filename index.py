@@ -49,7 +49,7 @@ def main():
     end_date = st.date_input("끝나는날짜:")
     number = st.number_input("검색 갯수:", min_value=1, step=1)
 
-    if st.button("Crawl News"):
+    if st.button("검색하기"):
         keywords_list = keywords.split(',')
         search_results = crawl_news(keywords_list, start_date, end_date, number)
 
