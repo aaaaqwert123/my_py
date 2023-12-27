@@ -42,12 +42,12 @@ def crawl_news(keywords, start_date, end_date, number):
     return search_results
 
 def main():
-    st.title("News Crawler with Streamlit")
+    st.title("입력해주세요")
 
-    keywords = st.text_input("Enter keywords (comma-separated):")
-    start_date = st.date_input("Start Date:")
-    end_date = st.date_input("End Date:")
-    number = st.number_input("Number of articles to retrieve:", min_value=1, step=1)
+    keywords = st.text_input("키워드")
+    start_date = st.date_input("시작날짜:")
+    end_date = st.date_input("끝나는날짜:")
+    number = st.number_input("검색 갯수:", min_value=1, step=1)
 
     if st.button("Crawl News"):
         keywords_list = keywords.split(',')
